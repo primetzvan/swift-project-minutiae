@@ -26,6 +26,9 @@
 		0F24040D25EFB6A2007656B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F24040F25EFB6A2007656B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF6E5A525EFD83E0092E353 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		0FF6E5A825EFE79B0092E353 /* unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock.png; sourceTree = "<group>"; };
+		0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint-scan.png"; sourceTree = "<group>"; };
+		0FF6E5AA25EFE79C0092E353 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,9 @@
 		0F24040025EFB69E007656B0 /* swift-minutiae-project */ = {
 			isa = PBXGroup;
 			children = (
+				0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */,
+				0FF6E5AA25EFE79C0092E353 /* lock.png */,
+				0FF6E5A825EFE79B0092E353 /* unlock.png */,
 				0F24040125EFB69E007656B0 /* AppDelegate.swift */,
 				0F24040325EFB69E007656B0 /* SceneDelegate.swift */,
 				0F24040525EFB69E007656B0 /* ViewController.swift */,
