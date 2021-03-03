@@ -13,7 +13,7 @@
 		0F24040925EFB69E007656B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040725EFB69E007656B0 /* Main.storyboard */; };
 		0F24040B25EFB6A2007656B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040A25EFB6A2007656B0 /* Assets.xcassets */; };
 		0F24040E25EFB6A2007656B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040C25EFB6A2007656B0 /* LaunchScreen.storyboard */; };
-		0FF6E5A625EFD83E0092E353 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 0FF6E5A525EFD83E0092E353 /* images */; };
+		0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +25,8 @@
 		0F24040A25EFB6A2007656B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F24040D25EFB6A2007656B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F24040F25EFB6A2007656B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FF6E5A525EFD83E0092E353 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
-		0FF6E5A825EFE79B0092E353 /* unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock.png; sourceTree = "<group>"; };
 		0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint-scan.png"; sourceTree = "<group>"; };
-		0FF6E5AA25EFE79C0092E353 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +43,6 @@
 		0F2403F525EFB69E007656B0 = {
 			isa = PBXGroup;
 			children = (
-				0FF6E5A525EFD83E0092E353 /* images */,
 				0F24040025EFB69E007656B0 /* swift-minutiae-project */,
 				0F2403FF25EFB69E007656B0 /* Products */,
 			);
@@ -63,8 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */,
-				0FF6E5AA25EFE79C0092E353 /* lock.png */,
-				0FF6E5A825EFE79B0092E353 /* unlock.png */,
 				0F24040125EFB69E007656B0 /* AppDelegate.swift */,
 				0F24040325EFB69E007656B0 /* SceneDelegate.swift */,
 				0F24040525EFB69E007656B0 /* ViewController.swift */,
@@ -72,6 +67,7 @@
 				0F24040A25EFB6A2007656B0 /* Assets.xcassets */,
 				0F24040C25EFB6A2007656B0 /* LaunchScreen.storyboard */,
 				0F24040F25EFB6A2007656B0 /* Info.plist */,
+				0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */,
 			);
 			path = "swift-minutiae-project";
 			sourceTree = "<group>";
@@ -133,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF6E5A625EFD83E0092E353 /* images in Resources */,
 				0F24040E25EFB6A2007656B0 /* LaunchScreen.storyboard in Resources */,
 				0F24040B25EFB6A2007656B0 /* Assets.xcassets in Resources */,
 				0F24040925EFB69E007656B0 /* Main.storyboard in Resources */,
@@ -148,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F24040625EFB69E007656B0 /* ViewController.swift in Sources */,
+				0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */,
 				0F24040225EFB69E007656B0 /* AppDelegate.swift in Sources */,
 				0F24040425EFB69E007656B0 /* SceneDelegate.swift in Sources */,
 			);
