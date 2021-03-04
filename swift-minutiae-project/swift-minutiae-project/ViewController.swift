@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class ViewController: UIViewController {
 
@@ -15,10 +16,57 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signIn(_ sender: UIButton) {
-        
-        print("Not implemented yet")
-        
+        authenticateUser();
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "login" {
+            if let viewController = segue.destination as? ViewController2
+            {
+                //viewController.tab_adress = self.address
+                print("perform segue")
+            }
+        }
+    }
+    
+    
+    func authenticateUser() {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [unowned self] success, authenticationError in
+
+                DispatchQueue.main.async {
+                    if success {
+                        // TODO
+                        //self.checkIfUserExists()
+                        print("fingerprint succeed")
+                        
+                        performSegue(withIdentifier: "login", sender: self)
+
+                    } else {
+                        let ac = UIAlertController(title: "Authentication failed", message: "Sorry!", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(ac, animated: true)
+                    }
+                }
+            }
+        } else {
+            let ac = UIAlertController(title: "Touch ID not available", message: "Your device is not configured for Touch ID.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    
     
 }
 
