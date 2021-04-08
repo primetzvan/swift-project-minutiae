@@ -13,6 +13,7 @@
 		0F24040925EFB69E007656B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040725EFB69E007656B0 /* Main.storyboard */; };
 		0F24040B25EFB6A2007656B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040A25EFB6A2007656B0 /* Assets.xcassets */; };
 		0F24040E25EFB6A2007656B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F24040C25EFB6A2007656B0 /* LaunchScreen.storyboard */; };
+		0F28155D261EE8FF00AED2CF /* ViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28155C261EE8FF00AED2CF /* ViewControllerDetail.swift */; };
 		0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		0F24040A25EFB6A2007656B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F24040D25EFB6A2007656B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F24040F25EFB6A2007656B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F28155C261EE8FF00AED2CF /* ViewControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDetail.swift; sourceTree = "<group>"; };
 		0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint-scan.png"; sourceTree = "<group>"; };
 		0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		AB086CB625F044D50072D099 /* swift-minutiae-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-minutiae-project.entitlements"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				0F24040C25EFB6A2007656B0 /* LaunchScreen.storyboard */,
 				0F24040F25EFB6A2007656B0 /* Info.plist */,
 				0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */,
+				0F28155C261EE8FF00AED2CF /* ViewControllerDetail.swift */,
 			);
 			path = "swift-minutiae-project";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */,
 				0F24040225EFB69E007656B0 /* AppDelegate.swift in Sources */,
 				0F24040425EFB69E007656B0 /* SceneDelegate.swift in Sources */,
+				0F28155D261EE8FF00AED2CF /* ViewControllerDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
