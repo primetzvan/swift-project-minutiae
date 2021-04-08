@@ -10,27 +10,27 @@
   {
     "doorID": 1,
     "Name": "Eingang",
-    "IP": 221.184.175.8
+    "IP": "221.184.175.8"
   },
   {
     "doorID": 2,
     "Name": "Hof",
-    "IP": 166.196.28.66
+    "IP": "166.196.28.66"
   },
   {
     "doorID": 3,
     "Name": "Garten",
-    "IP": 46.148.213.105
+    "IP": "46.148.213.105"
   },
   {
     "doorID": 4,
     "Name": "Garage",
-    "IP": 234.233.243.135
+    "IP": "234.233.243.135"
   },
   {
     "doorID": 5,
     "Name": "Hintertür",
-    "IP": 234.107.20.80
+    "IP": "234.107.20.80"
   }
 ],
   "userTable": [
@@ -38,15 +38,13 @@
     "userID": 1,
     "firstname": "Sarah",
     "lastname": "Feichtinger",
-    "email": "Sarah@gmail.com",
-    "passwordHash": "d603ac0c04b9d08974482ae7fd4cf55d"
+    "email": "Sarah@gmail.com"
   },
   {
     "userID": 2,
     "firstname": "Vanessa",
     "lastname": "Primetzhofer",
-    "email": "Vanessa@gmail.com",
-    "passwordHash": "d603ac0c04b9d08974482ae7fd4cf55d"
+    "email": "Vanessa@gmail.com"
   }
 ],
   "fingerTable": [
