@@ -12,6 +12,27 @@ class ViewControllerDetail: UITableViewController {
     let queue = DispatchQueue(label: "queue1")
     var model = Model()
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "scanQR" {
+            if let viewController = segue.destination as? ViewControllerQR
+            {
+                //viewController.tab_adress = self.address
+                print("perform segue")
+            }
+        }
+    }
+    
+
+    @IBAction func addDoor(_ sender: Any) {
+        performSegue(withIdentifier: "scanQR", sender: self)
+    }
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +44,7 @@ class ViewControllerDetail: UITableViewController {
     func download(){
         
         let model = Model()
-        if let url = URL(string: "https://jsonplaceholder.typicode.com/doorTable"){
+        if let url = URL(string: "http://0.0.0.0:3000/doorTable"){
             if let data = try? Data(contentsOf: url){
                 if let json = try? JSONSerialization.jsonObject(with:data, options:[]){
                     if let array = json as? [Any]{
@@ -32,7 +53,7 @@ class ViewControllerDetail: UITableViewController {
                                 let doorTable = DoorTable()
                                 doorTable.doorID = dict["doorID"] as! Int
                                 doorTable.name = dict["Name"] as! String
-                                doorTable.iP = dict["doorID"] as! String
+                                doorTable.iP = dict["IP"] as! String
                                 
                                 model.door.append(doorTable)
                             }
@@ -78,6 +99,12 @@ class ViewControllerDetail: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected cell \(indexPath.row)")
+        performSegue(withIdentifier: "detailOpen", sender: self)
+    }
+    
+
 
     /*
     // Override to support conditional editing of the table view.

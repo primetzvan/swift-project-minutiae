@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		0F28945E262109B8000FF19D /* ViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28945D262109B8000FF19D /* ViewControllerDetail.swift */; };
 		0F28946126210DAA000FF19D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28946026210DAA000FF19D /* Model.swift */; };
 		0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */; };
+		AB543A5726276DAB00F664BC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB543A5626276DAB00F664BC /* QRViewController.swift */; };
+		AB543A5E2627952400F664BC /* ViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB543A5D2627952400F664BC /* ViewControllerQR.swift */; };
+		AB543A622627A79500F664BC /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = AB543A612627A79500F664BC /* SwiftJWT */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,8 @@
 		0FF6E5A925EFE79C0092E353 /* fingerprint-scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fingerprint-scan.png"; sourceTree = "<group>"; };
 		0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		AB086CB625F044D50072D099 /* swift-minutiae-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swift-minutiae-project.entitlements"; sourceTree = "<group>"; };
+		AB543A5626276DAB00F664BC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		AB543A5D2627952400F664BC /* ViewControllerQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB543A622627A79500F664BC /* SwiftJWT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +76,12 @@
 				0F24040325EFB69E007656B0 /* SceneDelegate.swift */,
 				0F24040525EFB69E007656B0 /* ViewController.swift */,
 				0F24040725EFB69E007656B0 /* Main.storyboard */,
+				AB543A5626276DAB00F664BC /* QRViewController.swift */,
 				0F24040A25EFB6A2007656B0 /* Assets.xcassets */,
 				0F24040C25EFB6A2007656B0 /* LaunchScreen.storyboard */,
 				0F24040F25EFB6A2007656B0 /* Info.plist */,
 				0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */,
+				AB543A5D2627952400F664BC /* ViewControllerQR.swift */,
 				0F28945D262109B8000FF19D /* ViewControllerDetail.swift */,
 				0F28946026210DAA000FF19D /* Model.swift */,
 			);
@@ -94,8 +102,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				AB543A652627A8AB00F664BC /* PBXTargetDependency */,
 			);
 			name = "swift-minutiae-project";
+			packageProductDependencies = (
+				AB543A612627A79500F664BC /* SwiftJWT */,
+			);
 			productName = "swift-minutiae-project";
 			productReference = 0F2403FE25EFB69E007656B0 /* swift-minutiae-project.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 0F2403F525EFB69E007656B0;
+			packageReferences = (
+				AB543A602627A79500F664BC /* XCRemoteSwiftPackageReference "Swift-JWT" */,
+			);
 			productRefGroup = 0F2403FF25EFB69E007656B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +168,8 @@
 				0F24040625EFB69E007656B0 /* ViewController.swift in Sources */,
 				0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */,
 				0F24040225EFB69E007656B0 /* AppDelegate.swift in Sources */,
+				AB543A5E2627952400F664BC /* ViewControllerQR.swift in Sources */,
+				AB543A5726276DAB00F664BC /* QRViewController.swift in Sources */,
 				0F28946126210DAA000FF19D /* Model.swift in Sources */,
 				0F24040425EFB69E007656B0 /* SceneDelegate.swift in Sources */,
 				0F28945E262109B8000FF19D /* ViewControllerDetail.swift in Sources */,
@@ -160,6 +177,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB543A652627A8AB00F664BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = AB543A642627A8AB00F664BC /* SwiftJWT */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F24040725EFB69E007656B0 /* Main.storyboard */ = {
@@ -359,6 +383,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB543A602627A79500F664BC /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Swift-JWT.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.6.200;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB543A612627A79500F664BC /* SwiftJWT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB543A602627A79500F664BC /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
+		};
+		AB543A642627A8AB00F664BC /* SwiftJWT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB543A602627A79500F664BC /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F2403F625EFB69E007656B0 /* Project object */;
 }

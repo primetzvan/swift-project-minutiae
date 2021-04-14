@@ -7,6 +7,11 @@
 
 import Foundation
 
+class Token{
+    
+}
+
+
 class DoorTable{
     var doorID = 0
     var name = ""
@@ -15,4 +20,5 @@ class DoorTable{
 
 class Model{
     var door = [DoorTable]()
+    var tokens = [Token]()
 }

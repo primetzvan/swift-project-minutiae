@@ -69,9 +69,11 @@
     "userID": 1,
     "doorID":  1,
     "opentime": 200
-  {
+  }
 ],
-  "profile": {
+"profile": 
+  {
     "name": "typicode"
   }
 }
+
