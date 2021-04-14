@@ -105,8 +105,20 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         else{
             print("Ungülitger Token")
         }*/
-        print(code)
+        
+        saveTokenLocal(code: code)
+        print(UserDefaults.standard.string(forKey: "authtoken"))
     }
+    
+    
+    func saveTokenLocal(code: String)
+    {
+        let defaults = UserDefaults.standard
+        defaults.set(code, forKey: "authtoken")
+
+        defaults.synchronize()
+    }
+    
 
     override var prefersStatusBarHidden: Bool {
         return true
