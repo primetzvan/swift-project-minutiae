@@ -59,7 +59,19 @@
     "binFile": "filename"
   }
 ],
-"logTable": [
+"logAccessTable": [
+  {
+    "userID": 1,
+    "doorID": 1,
+    "time": "1996-12-19T16:39:57-08:00"
+  },
+  {
+    "userID": 1,
+    "doorID":  2,
+    "time": "1996-12-19T16:39:57-08:00"
+  }
+],
+"accessTable": [
   {
     "userID": 1,
     "doorID": 1,
