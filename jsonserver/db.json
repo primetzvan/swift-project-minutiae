@@ -59,16 +59,18 @@
     "binFile": "filename"
   }
 ],
-"accessTable": [
+"logTable": [
   {
     "userID": 1,
     "doorID": 1,
-    "opentime": 12
+    "startdate": "12.09.18",
+    "enddate": "12.09.21"
   },
   {
     "userID": 1,
-    "doorID":  1,
-    "opentime": 200
+    "doorID":  2,
+    "startdate": "12.09.18",
+    "enddate": "12.09.21"
   }
 ],
 "profile": 
