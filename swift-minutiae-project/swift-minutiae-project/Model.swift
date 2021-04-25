@@ -18,7 +18,25 @@ class DoorTable{
     var iP = ""
 }
 
+class UserTable{
+    var id = 0
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var role = ""
+}
+
+class AccessTable{
+    var userID = -1
+    var doorID = -1
+    var startDate = ""
+    var endDate = ""
+}
+
 class Model{
     var door = [DoorTable]()
+    var user = [UserTable]()
+    var userAccesses = [AccessTable]()
+    var currentUser:UserTable?
     var tokens = [Token]()
 }

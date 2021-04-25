@@ -1,6 +1,5 @@
 import AVFoundation
 import UIKit
-import SwiftJWT
 
 class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
@@ -96,27 +95,27 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             }
         }
         
-        
-        /*let jwtVerifier = JWTVerifier.rs256(publicKey: publicKey)
-         if (JWT<MyClaims>.verify(code, using: jwtVerifier))
-        {
-            
-        }
-        else{
-            print("Ungülitger Token")
-        }*/
-        
         saveTokenLocal(code: code)
-        print(UserDefaults.standard.string(forKey: "authtoken"))
+        //print(UserDefaults.standard.string(forKey: "authtoken"))
     }
     
     
     func saveTokenLocal(code: String)
     {
         let defaults = UserDefaults.standard
-        defaults.set(code, forKey: "authtoken")
+        var accessArray = [Any]()
+        
+        if let accesses = UserDefaults.standard.array(forKey: "authtoken") {
+            accessArray = accesses
+        }
+        
+        accessArray.append(code)
+        
+        defaults.set(accessArray, forKey: "authtoken")
 
         defaults.synchronize()
+        
+        //TODO: infos aus dem token in der Datenbank speichern
     }
     
 

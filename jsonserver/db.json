@@ -38,13 +38,15 @@
     "userID": 1,
     "firstname": "Sarah",
     "lastname": "Feichtinger",
-    "email": "Sarah@gmail.com"
+    "email": "Sarah@gmail.com",
+    "role": "user"
   },
   {
     "userID": 2,
     "firstname": "Vanessa",
     "lastname": "Primetzhofer",
-    "email": "Vanessa@gmail.com"
+    "email": "Vanessa@gmail.com",
+    "role": "admin"
   }
 ],
   "fingerTable": [
