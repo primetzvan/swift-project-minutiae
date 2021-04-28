@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DE5E1917-34DF-EBF8-4EE7-57A7244AB85C" name="logAccessTable">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:04:55 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="time" id="F3F8B5E1-8509-4847-CE51-1CE448BB1D3C">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:05:23 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="userTable_userId" id="12F3B1E2-13C4-1140-FF88-4AECAEE65078">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:06:09 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FCB2B04-1875-5C8D-FBA8-1BE83AD2F32A" referredColumn="F1209CB2-E1BA-C9A0-7B95-2474448843A3"/>
+</associations>
+</Column>
+<Column name="doorTable_doorId" id="6B6C5A9D-65B7-D977-E5D4-1E8370B15959">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:06:41 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="95B18A0E-143E-6F8E-B3FB-FDBEB32429DB" referredColumn="C590406F-9BB9-F24A-AB9D-D021C4160559"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D04EC2B4-1C4E-D28B-806C-DD882B22E1CC" name="logAccessTable_PK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:06:50 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12F3B1E2-13C4-1140-FF88-4AECAEE65078"/>
+<colUsage columnID="6B6C5A9D-65B7-D977-E5D4-1E8370B15959"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FDE69A0-25AD-0E43-A1B9-C5529C559C95" name="logAccessTable_userTable_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:06:09 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12F3B1E2-13C4-1140-FF88-4AECAEE65078"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E15CE34E-E1E7-16A4-F8A8-2DDD00740345" name="logAccessTable_doorTable_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:06:41 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B6C5A9D-65B7-D977-E5D4-1E8370B15959"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44FB0005-0227-865E-E213-41A161B567C8" name="userTable">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:32:07 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="userId" id="F1209CB2-E1BA-C9A0-7B95-2474448843A3">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:32:38 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="firstname" id="1AD30856-6F76-1D8E-C61B-5FD75C3C5237">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:02:48 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lastname" id="BC705A29-CB56-70B2-6301-1D205482AF1E">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:03:15 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="DCDDE1AB-9EE9-135B-B06D-27DE6C86DEFD">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:03:28 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="role" id="99A10227-C2CC-DE62-78CF-8C85DABF074E">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:03:38 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AD64849-0EAD-32C1-EB0B-AA7D2233A623" name="user_PK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:32:38 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1209CB2-E1BA-C9A0-7B95-2474448843A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

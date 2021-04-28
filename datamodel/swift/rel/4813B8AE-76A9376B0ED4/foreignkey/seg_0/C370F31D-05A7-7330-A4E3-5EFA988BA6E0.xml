@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C370F31D-05A7-7330-A4E3-5EFA988BA6E0" containerWithKeyObject="94472D0A-757A-1B0B-504E-09C3FB5C6D55" localFKIndex="981B511A-6A7A-57E6-644B-A1425677035C" name="accessTable_doorTable_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:29 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<referredTableLongName>doorTable</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F30FAA38-3DDB-3F50-E767-FC842786A269</referredTableID>
+<keyObject>4A2ED978-662B-1956-1444-015C54CBA697</keyObject>
+<referredKeyID>4A2ED978-662B-1956-1444-015C54CBA697</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>doorId</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

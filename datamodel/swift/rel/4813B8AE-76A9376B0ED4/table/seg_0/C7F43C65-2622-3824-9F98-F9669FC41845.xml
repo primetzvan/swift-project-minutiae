@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7F43C65-2622-3824-9F98-F9669FC41845" name="finger">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:32:39 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="finger" id="B866F2EB-DEA5-8F83-3188-4155D958C1CF">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:33:08 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id" id="D95B5062-2002-9179-A0CC-B0D35D26AD7B">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:33:41 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6250AE97-CC46-23BF-C997-F37F18F6BF64" referredColumn="F1209CB2-E1BA-C9A0-7B95-2474448843A3"/>
+</associations>
+</Column>
+<Column name="binFile" id="597A51CA-ED33-43A1-ABAD-10963C97D915">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:04:29 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9330CB38-15C7-F432-3EC7-C2449DB02CE8" name="finger_PK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:33:08 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B866F2EB-DEA5-8F83-3188-4155D958C1CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="018DC072-6903-84EF-4359-06E174449FE7" name="userid_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:33:41 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D95B5062-2002-9179-A0CC-B0D35D26AD7B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

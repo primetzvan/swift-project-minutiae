@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="94472D0A-757A-1B0B-504E-09C3FB5C6D55" name="accessTable">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:07:24 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="startdate" id="3131C7A8-BA4C-AD9C-96E6-3A46743EBCE0">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:07:50 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="enddate" id="EDBF03A8-9BBD-5A22-969B-47D81F2BF168">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:00 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="userTable_userId" id="6F616441-A9A9-EE49-B401-EC9D165CC4E9">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:06 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4AF97B21-2BDE-A8DE-E94F-2B27FE3FB0FC" referredColumn="F1209CB2-E1BA-C9A0-7B95-2474448843A3"/>
+</associations>
+</Column>
+<Column name="doorTable_doorId" id="8F4F8194-1EC5-F842-D888-81EE717F803B">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:29 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C370F31D-05A7-7330-A4E3-5EFA988BA6E0" referredColumn="C590406F-9BB9-F24A-AB9D-D021C4160559"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DF45A1A-3DAB-DE4D-E585-56406AFA5E3A" name="accessTable_PK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:43 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F616441-A9A9-EE49-B401-EC9D165CC4E9"/>
+<colUsage columnID="8F4F8194-1EC5-F842-D888-81EE717F803B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CD5D795-830B-4148-83E2-BB56432F3651" name="accessTable_userTable_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:06 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F616441-A9A9-EE49-B401-EC9D165CC4E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="981B511A-6A7A-57E6-644B-A1425677035C" name="accessTable_doorTable_FK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:08:29 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F4F8194-1EC5-F842-D888-81EE717F803B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

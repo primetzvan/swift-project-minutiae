@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F30FAA38-3DDB-3F50-E767-FC842786A269" name="doorTable">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 08:51:45 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="doorId" id="C590406F-9BB9-F24A-AB9D-D021C4160559">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:01:54 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="4AC85FE6-8E26-C3E5-C2FC-2EFC0525DAA0">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:02:07 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ip" id="FF36C3FE-46F4-8AA1-0F21-446E88A846DA">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:02:21 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A2ED978-662B-1956-1444-015C54CBA697" name="doorTable_PK">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-28 09:01:54 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C590406F-9BB9-F24A-AB9D-D021C4160559"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

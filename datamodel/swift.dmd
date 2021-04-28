@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="swift" id="A2312D52-D43C-ADA4-972F-B7AF9DE6AE37" version="3.5">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:21:57 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A2312D52-D43C-ADA4-972F-B7AF9DE6AE37</designId>
+</OSDM_Design>

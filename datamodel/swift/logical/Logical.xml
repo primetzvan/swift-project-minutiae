@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="6CA1ED7E-AACD-358D-6B1C-4FD78FB1B985" mainViewID="768CCB94-0F38-0E06-A61F-DDE8181F29F3">
+<createdBy>prime</createdBy>
+<createdTime>2021-04-27 21:21:57 UTC</createdTime>
+<ownerDesignName>swift</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

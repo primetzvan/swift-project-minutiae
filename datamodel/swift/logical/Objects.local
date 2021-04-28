@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="E86AED13-9D04-9EB7-D845-CF494F24B7F4" name="doorTable" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="6CA1ED7E-AACD-358D-6B1C-4FD78FB1B985" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="3EDF78CB-33FF-786C-2CA0-1D82D33E66AD" name="fingerTable" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="6CA1ED7E-AACD-358D-6B1C-4FD78FB1B985" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="05CEBBE3-3217-8806-5220-F8B89B8044C8" name="usertable" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="6CA1ED7E-AACD-358D-6B1C-4FD78FB1B985" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="F9620CF0-5CB6-AD4F-9661-87877FF30611" name="Relation_1" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="6CA1ED7E-AACD-358D-6B1C-4FD78FB1B985" propertySourceId="05CEBBE3-3217-8806-5220-F8B89B8044C8" propertyTargetId="3EDF78CB-33FF-786C-2CA0-1D82D33E66AD"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
