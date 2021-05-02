@@ -1,0 +1,28 @@
+[plantuml]
+----
+@startuml
+actor User as u
+package Smartphone-App {
+usecase "Tür öffnen" as UC1
+usecase "QR Code scannen" as UC2
+}
+
+u --> UC1
+u --> UC2
+@enduml
+----
+
+[plantuml]
+
+----
+@startuml
+actor Admin as a
+package Website {
+usecase "User anlegen" as UC3
+usecase "QR Code anlegen" as UC4
+}
+
+a --> UC3
+a --> UC4
+@enduml
+----
