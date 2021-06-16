@@ -3,3 +3,4 @@ db
 
 ./jsonserver/node_modules/
 
+/jwt-json-server/node_modules/
