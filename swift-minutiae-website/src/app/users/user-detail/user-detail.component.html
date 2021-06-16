@@ -1,0 +1,18 @@
+<mat-card>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>New User</mat-label>
+      <input matInput placeholder="Firstname" value="firstname">
+      <input matInput placeholder="Lastname" value="lastname">
+      <input matInput placeholder="Email" value="email">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Role</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let role of ['User', 'Admin']" [value]="role">
+          {{role}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-card>
