@@ -12,19 +12,19 @@ export class JsonServerService {
   constructor(private readonly http: HttpClient) {
   }
 
-  getAllUser(): Observable<User> {
-    return this.http.get<User>('http://localhost:8080/');
+  getAllUser(): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3000/userTable');
   }
 
-  getAllDoors(): Observable<Door> {
-    return this.http.get<Door>('http://localhost:8080/');
+  getAllDoors(): Observable<Door[]> {
+    return this.http.get<Door[]>('http://localhost:3000/doorTable');
   }
 
   addUser(user: User): void {
-    this.http.post<User>('http://localhost:8080/', user);
+    this.http.post<User>('http://localhost:3000/userTable', user);
   }
 
-  addDoor(door: Door): void{
-    this.http.post<Door>('http://localhost:8080/', door);
+  deleteUser(id: number): void {
+    this.http.post<User>('http://localhost:3000/userTable', id);
   }
 }

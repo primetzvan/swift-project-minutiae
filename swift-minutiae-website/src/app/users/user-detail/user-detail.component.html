@@ -1,18 +1,28 @@
+<h1>Add User</h1>
+
 <mat-card>
   <form class="example-form">
     <mat-form-field class="example-full-width">
-      <mat-label>New User</mat-label>
-      <input matInput placeholder="Firstname" value="firstname">
-      <input matInput placeholder="Lastname" value="lastname">
-      <input matInput placeholder="Email" value="email">
-    </mat-form-field>
+      <mat-label>Firstname</mat-label>
+      <input matInput [(ngModel)]="firstName" name="fname">
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Lastname</mat-label>
+      <input matInput [(ngModel)]="lastName" name="lname">
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="mail">
+    </mat-form-field><br>
+
+    <br>
     <mat-form-field appearance="fill">
       <mat-label>Role</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let role of ['User', 'Admin']" [value]="role">
-          {{role}}
-        </mat-option>
+      <mat-select [(value)]="role">
+          <mat-option [value]=0>Admin</mat-option>
+          <mat-option [value]=1>User</mat-option>
       </mat-select>
     </mat-form-field>
+    <button mat-raised-button [routerLink]="''" [disabled]="firstName==''||lastName==''||!checkEmail()||role==null" (click)="addUser()">Add</button>
   </form>
 </mat-card>

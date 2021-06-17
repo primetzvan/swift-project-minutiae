@@ -1,8 +1,11 @@
-<mat-card>
-  <app-users></app-users>
-  <app-doors></app-doors>
-  <app-generate-token></app-generate-token>
+<ul class="container">
+  <li class="nav-item"><a class="nav-link" routerLink="users">Users</a></li>
+  <li class="nav-item"><a class="nav-link" routerLink="doors">Doors</a></li>
+  <li class="nav-item"><a class="nav-link" routerLink="generateToken">Add Access</a></li>
+</ul>
 
+<mat-card>
   <router-outlet></router-outlet>
 </mat-card>
+
 

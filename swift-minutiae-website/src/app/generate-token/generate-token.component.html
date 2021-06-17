@@ -3,9 +3,9 @@
 <mat-card>
   <mat-form-field appearance="fill">
     <mat-label>Door</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let door of doors" [value]="door.name">
-        {{door.name}}
+    <mat-select [(ngModel)]="selectedDoor" name="door">
+      <mat-option *ngFor="let door of doors" [value]="door.Name" >
+        {{door.Name}}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -14,8 +14,8 @@
 
   <mat-form-field appearance="fill">
     <mat-label>User</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let user of users" [value]="user.lastname">
+    <mat-select [(ngModel)]="selectedUser" name="user">
+      <mat-option *ngFor="let user of users" [value]="user.lastname" >
         {{user.firstname}} {{user.lastname}}
       </mat-option>
     </mat-select>
@@ -26,8 +26,8 @@
   <mat-form-field appearance="fill">
     <mat-label>Enter a date range</mat-label>
     <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-        <input matStartDate formControlName="start" placeholder="Start date">
-        <input matEndDate formControlName="end" placeholder="End date">
+        <input matStartDate formControlName="start" placeholder="Start date" [(ngModel)]="startDate" name="start">
+        <input matEndDate formControlName="end" placeholder="End date" [(ngModel)]="endDate" name="end">
     </mat-date-range-input>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
@@ -40,7 +40,8 @@
 
   <br>
 
-  <button mat-button color="primary">Generate</button>
+  <!--<a routerLink="/getToken"><button mat-button color="primary" (click)="generateToken()">Generate</button></a>-->
+  <button mat-button color="primary" (click)="generateToken()">Generate</button>
 
 </mat-card>
 

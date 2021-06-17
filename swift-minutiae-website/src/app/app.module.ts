@@ -13,11 +13,14 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule, MatDateRangeInput} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { QrCodeComponent } from './qr-code/qr-code.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import {MatIcon, MatIconModule} from '@angular/material/icon';
     UsersComponent,
     DoorsComponent,
     GenerateTokenComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    QrCodeComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import {MatIcon, MatIconModule} from '@angular/material/icon';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

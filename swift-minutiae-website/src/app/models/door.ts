@@ -1,12 +1,12 @@
 export class Door {
 
-  id: number;
-  name: string;
-  ip: string;
+  doorID: number;
+  Name: string;
+  IP: string;
 
-  constructor(id: number, name: string, ip: string) {
-    this.id = id;
-    this.name = name;
-    this.ip = ip;
+  constructor(doorID: number, Name: string, IP: string) {
+    this.doorID = doorID;
+    this.Name = Name;
+    this.IP = IP;
   }
 }

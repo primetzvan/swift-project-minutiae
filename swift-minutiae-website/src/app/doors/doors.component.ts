@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Door} from '../models/door';
+import {JsonServerService} from '../json-server.service';
 
 @Component({
   selector: 'app-doors',
@@ -9,14 +10,18 @@ import {Door} from '../models/door';
 export class DoorsComponent implements OnInit {
 
   DOOR_DATA: Door[];
-  displayedColumns: string[] = ['id', 'name', 'ip', 'remove'];
+  displayedColumns: string[] = ['id', 'name', 'ip'];
 
-  constructor() {
-    this.DOOR_DATA = [];
-    this.DOOR_DATA.push(new Door(1, 'Hintertür', '12.234.12.23'));
+  constructor(private doorService: JsonServerService) {
   }
 
   ngOnInit(): void {
+    this.getDoors();
+  }
+
+  getDoors(): void {
+    this.doorService.getAllDoors()
+      .subscribe(doors => this.DOOR_DATA = doors);
   }
 
 }

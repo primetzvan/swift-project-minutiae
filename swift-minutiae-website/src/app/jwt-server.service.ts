@@ -1,16 +1,29 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {Door} from './models/door';
+import {User} from './models/user';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {catchError, tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JwtServerService {
 
-  constructor() { }
+  qrCode: string;
+
+  constructor(private readonly http: HttpClient) {
+  }
 
   //  { "userid": 1 , "doorid": 13, "from": 1618471665, "to": 1618471999 }
-  getToken(): void {
+  getToken(userId: number, doorId: number, start: Date, end: Date): Observable<string> {
 
+    const headers: HttpHeaders = new HttpHeaders({Accept: 'text/html'});
+
+    return this.http
+      .get('http://localhost:8000/getQrCode?user=' + userId + '&door=' + doorId + '&startDate=' + start + '&endDate=' + end,
+        {headers, responseType: 'text' }).pipe(
+        tap(res => console.log(res))
+      );
   }
 }
