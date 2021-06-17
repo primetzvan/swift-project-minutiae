@@ -2,7 +2,9 @@
 Project for media technology in the swift programming specialization. Based on the thesis minutiae. Implemented as a mobile version.
 
 Start json-server:
-* Npm install
-* npm init -y
-* npm install json-server --save-dev
-* npx json-server --watch db.json --host 0.0.0.0
+* npm install
+* npm run start-auth
+
+Der swift-server (Server der App) läuft auf http://localhost:8000.
+
+Der jwt-json-server (Server der Website) läuft auf http://localhost:3000.

@@ -1,0 +1,7 @@
+node_modules
+db
+
+./jsonserver/node_modules/
+
+/jwt-json-server/node_modules/
+/swift-server/node_modules
