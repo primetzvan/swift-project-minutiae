@@ -2,6 +2,7 @@ const fs = require('fs')
 const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
+const jwt_decode = require('jwt-decode');
 
 const server = jsonServer.create()
 const router = jsonServer.router('./database.json')
@@ -32,48 +33,55 @@ server.get('/fingerTable', (req, res) => {
 
   //TODO: prüfen
   var elem = jwt_decode(req.body, { header: true });
-  console.log(decodedHeader);
+  console.log(elem);
 
+  var result;
   //nexte zeile userID aus elem usw.
   if (db.accessTable.findIndex(access => access.userID === userID && access.doorID === doorID && access.startdate === startdate && access.enddate === enddate)){
     console.log(true)
-    res.status(200).json(true)
+    result = true
+    res.status(200).json(result)
   }else {
     console.log(false)
-    res.status(200).json(false)
+    result = false
+    res.status(200).json(result)
   }
 
 })
 
 server.post('/addaccess', (req, res) => {
 
-  var elem = jwt_decode(req.body, { header: true });
-  console.log(decodedHeader);
+  console.log(req.body.token)
+  var token = req.body.token;
+   var elem = jwt_decode(token);
+   console.log(elem);
 
-  fs.readFile("./database.json", (err, data) => {
-    if (err) {
-      const status = 401
-      const message = err
-      res.status(status).json({status, message})
-      return
-    }
+   fs.readFile("./database.json", (err, data) => {
+     if (err) {
+       const status = 401
+       const message = err
+       res.status(status).json({status, message})
+       return
+     }
 
-    var data = JSON.parse(data.toString());
+     var data = JSON.parse(data.toString());
 
-    console.log(elem)
+     console.log(data)
 
-    //TODO: prüfen
+     //TODO: prüfen
+    // console.log(data.get("doorID"))
+    res.status(200)
 
-    data.accessTable.push({userID: elem.get("userID"), doorID: elem.get("doorID"), startDate: elem.get("startDate"), endDate: elem.get("endDate")}); //add some data
-    fs.writeFile("./database.json", JSON.stringify(data), (err, result) => {  // WRITE
-      if (err) {
-        const status = 401
-        const message = err
-        res.status(status).json({status, message})
-        return
-      }
-    });
-  })
+     //data.accessTable.push({userID: data.get("userID"), doorID: data.get("doorID"), startDate: data.get("startDate"), endDate: data.get("endDate")}); //add some data
+     fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
+       if (err) {
+         const status = 401
+         const message = err
+         res.status(status).json({status, message})
+         return
+       }
+     });
+   })
 });
 
 server.listen(8000, () => {
