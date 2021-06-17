@@ -13,10 +13,6 @@ class OverviewViewController: UIViewController {
         performSegue(withIdentifier: "showDoors", sender: self)
     }
     
-    @IBAction func viewUsers(_ sender: Any) {
-        performSegue(withIdentifier: "showUsers", sender: self)
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

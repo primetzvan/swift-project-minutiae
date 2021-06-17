@@ -20,12 +20,7 @@
 		AB543A5E2627952400F664BC /* ViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB543A5D2627952400F664BC /* ViewControllerQR.swift */; };
 		AB543A622627A79500F664BC /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = AB543A612627A79500F664BC /* SwiftJWT */; };
 		ABE1036D263549F000F0A0A5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1036C263549F000F0A0A5 /* OverviewViewController.swift */; };
-		ABE1037026354D4400F0A0A5 /* UsersViewControllerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1036F26354D4400F0A0A5 /* UsersViewControllerDetail.swift */; };
-		ABE103732635547C00F0A0A5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE103722635547C00F0A0A5 /* UserDetailViewController.swift */; };
 		ABE103782635608200F0A0A5 /* AllDoorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE103772635608200F0A0A5 /* AllDoorsTableViewController.swift */; };
-		ABE1037B26356D1F00F0A0A5 /* AccessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1037A26356D1F00F0A0A5 /* AccessTableViewController.swift */; };
-		ABE1037E26356D7600F0A0A5 /* AddAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1037D26356D7600F0A0A5 /* AddAccessViewController.swift */; };
-		ABE103812635E15200F0A0A5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE103802635E15200F0A0A5 /* UsersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +40,7 @@
 		AB543A5626276DAB00F664BC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		AB543A5D2627952400F664BC /* ViewControllerQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQR.swift; sourceTree = "<group>"; };
 		ABE1036C263549F000F0A0A5 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		ABE1036F26354D4400F0A0A5 /* UsersViewControllerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewControllerDetail.swift; sourceTree = "<group>"; };
-		ABE103722635547C00F0A0A5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		ABE103772635608200F0A0A5 /* AllDoorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDoorsTableViewController.swift; sourceTree = "<group>"; };
-		ABE1037A26356D1F00F0A0A5 /* AccessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTableViewController.swift; sourceTree = "<group>"; };
-		ABE1037D26356D7600F0A0A5 /* AddAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccessViewController.swift; sourceTree = "<group>"; };
-		ABE103802635E15200F0A0A5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +80,6 @@
 				0F24040325EFB69E007656B0 /* SceneDelegate.swift */,
 				0F24040525EFB69E007656B0 /* ViewController.swift */,
 				0F24040725EFB69E007656B0 /* Main.storyboard */,
-				ABE1037D26356D7600F0A0A5 /* AddAccessViewController.swift */,
-				ABE1037A26356D1F00F0A0A5 /* AccessTableViewController.swift */,
-				ABE103722635547C00F0A0A5 /* UserDetailViewController.swift */,
 				ABE1036C263549F000F0A0A5 /* OverviewViewController.swift */,
 				AB543A5626276DAB00F664BC /* QRViewController.swift */,
 				0F24040A25EFB6A2007656B0 /* Assets.xcassets */,
@@ -101,8 +88,6 @@
 				0FF6E5AF25EFEF5A0092E353 /* ViewController2.swift */,
 				AB543A5D2627952400F664BC /* ViewControllerQR.swift */,
 				0F28945D262109B8000FF19D /* ViewControllerDetail.swift */,
-				ABE1036F26354D4400F0A0A5 /* UsersViewControllerDetail.swift */,
-				ABE103802635E15200F0A0A5 /* UsersTableViewCell.swift */,
 				ABE103772635608200F0A0A5 /* AllDoorsTableViewController.swift */,
 				0F28946026210DAA000FF19D /* Model.swift */,
 			);
@@ -186,11 +171,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE1037B26356D1F00F0A0A5 /* AccessTableViewController.swift in Sources */,
 				0F24040625EFB69E007656B0 /* ViewController.swift in Sources */,
 				0FF6E5B025EFEF5A0092E353 /* ViewController2.swift in Sources */,
-				ABE1037026354D4400F0A0A5 /* UsersViewControllerDetail.swift in Sources */,
-				ABE103812635E15200F0A0A5 /* UsersTableViewCell.swift in Sources */,
 				ABE1036D263549F000F0A0A5 /* OverviewViewController.swift in Sources */,
 				0F24040225EFB69E007656B0 /* AppDelegate.swift in Sources */,
 				AB543A5E2627952400F664BC /* ViewControllerQR.swift in Sources */,
@@ -199,8 +181,6 @@
 				0F24040425EFB69E007656B0 /* SceneDelegate.swift in Sources */,
 				ABE103782635608200F0A0A5 /* AllDoorsTableViewController.swift in Sources */,
 				0F28945E262109B8000FF19D /* ViewControllerDetail.swift in Sources */,
-				ABE1037E26356D7600F0A0A5 /* AddAccessViewController.swift in Sources */,
-				ABE103732635547C00F0A0A5 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

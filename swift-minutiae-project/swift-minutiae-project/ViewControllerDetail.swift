@@ -45,7 +45,7 @@ class ViewControllerDetail: UITableViewController {
     func download(){
         
         let model = Model()
-        if let url = URL(string: "http://0.0.0.0:3000/doorTable"){
+        if let url = URL(string: "http://0.0.0.0:3000/doorTable/"){
             if let data = try? Data(contentsOf: url){
                 if let json = try? JSONSerialization.jsonObject(with:data, options:[]){
                     if let array = json as? [Any]{
