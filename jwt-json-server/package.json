@@ -1,0 +1,28 @@
+{
+  "name": "json-server-api",
+  "version": "1.0.0",
+  "description": "Simple Fake API",
+  "main": "main.js",
+  "scripts": {
+    "start": "json-server --watch ./database.json",
+    "start-auth": "node server.js"
+  },
+  "author": "ME:)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "jsonwebtoken": "^8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techiediaries/fake-api-jwt-json-server.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/techiediaries/fake-api-jwt-json-server/issues"
+  },
+  "homepage": "https://github.com/techiediaries/fake-api-jwt-json-server#readme",
+  "devDependencies": {
+    "json-server": "^0.16.3"
+  }
+}

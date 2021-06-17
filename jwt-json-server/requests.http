@@ -1,0 +1,11 @@
+POST http://localhost:8000/auth/token
+Content-Type: application/json
+
+{
+  "userID": 1,
+  "doorID": 1,
+  "startdate": "28.04.2021",
+  "enddate": "30.04.2021"
+}
+
+###
