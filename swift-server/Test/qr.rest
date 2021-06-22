@@ -4,3 +4,35 @@ Content-Type: application/json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNDEiLCJkb29ySUQiOlsiMjgiLCIyOCJdLCJzdGFydERhdGUiOlsiM2Q_dXNlcklEPTI0MSIsIjM0Il0sImVuZERhdGUiOlsiMjIiLCIyMiJdLCJpYXQiOjE2MjM5MTEwMzgsImV4cCI6MTYyMzkxNDYzOH0.goTDtsQRFKIOYJc9lJOqN2Ej_kZttCUgfm35KXSdusM"
 }
+
+###
+
+GET http://localhost:8000/getAllDoorsFromUser
+Content-Type: application/json
+
+{
+  "userID": 1
+}
+
+###
+
+
+#True
+GET http://localhost:8000/checkaccess
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNDEiLCJkb29ySUQiOlsiMjgiLCIyOCJdLCJzdGFydERhdGUiOlsiM2Q_dXNlcklEPTI0MSIsIjM0Il0sImVuZERhdGUiOlsiMjIiLCIyMiJdLCJpYXQiOjE2MjM5MTEwMzgsImV4cCI6MTYyMzkxNDYzOH0.goTDtsQRFKIOYJc9lJOqN2Ej_kZttCUgfm35KXSdusM"
+}
+
+
+###
+
+
+#False
+GET http://localhost:8000/checkaccess
+Content-Type: application/json
+
+{
+  "token": "eyJhbGJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNDEiLCJkb29ySUQiOlsiMjgiLCIyOCJdLCJzdGFydERhdGUiOlsiM2Q_dXNlcklEPTI0MSIsIjM0Il0sImVuZERhdGUiOlsiMjIiLCIyMiJdLCJpYXQiOjE2MjM5MTEwMzgsImV4cCI6MTYyMzkxNDYzOH0.goTDtsQRFKIOYJc9lJOqN2Ej_kZttCUgfm35KXSdusM"
+}

@@ -1,3 +1,31 @@
+
+#Richtiger Pfad
+
 GET http://localhost:3000/getQrCode?userID=241&doorID=28&startDate=34&endDate=22
 
+
+###
+
+
+POST http://localhost:3000/addUser
+Content-Type: application/json
+
+{
+  "user": {
+    "userID": 5,
+    "firstname": "Chrissy",
+    "lastname": "Raffeiner",
+    "email": "Chrissy@gmail.com",
+    "role": "user"
+  }
+}
+
+###
+
+DELETE http://localhost:3000/deleteUser
+Content-Type: application/json
+
+{
+  "userID": 5
+}
 
