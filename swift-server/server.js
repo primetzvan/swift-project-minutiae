@@ -79,9 +79,8 @@ server.get('/getAllDoorsFromUser', (req, res) => {
 
 server.get('/checkaccess', (req, res) => {
 
-  var token = req.body.token;
+  var {token} = req.query;
   var elem = jwt_decode(token);
-  console.log(elem);
 
   fs.readFile("./database.json", (err, data) => {
     if (err) {
@@ -97,7 +96,6 @@ server.get('/checkaccess', (req, res) => {
 
     var result;
     //nexte zeile userID aus elem usw.
-    console.log(elem.enddate)
     if (data.accessTable.findIndex(access => access.userID === elem.userID && access.doorID === elem.doorID && access.startdate === elem.startdate && access.enddate === elem.enddate) && elem.enddate >= Date.now()) {
       console.log(true)
       result = true

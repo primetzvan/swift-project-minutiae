@@ -40,6 +40,12 @@ Content-Type: application/json
 
 ###
 
+### False
+GET http://localhost:8000/checkaccess?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1IiwiZG9vcklEIjoiMyIsInN0YXJ0RGF0ZSI6IlRodSBKdW4gMTAgMjAyMSAwMDowMDowMCBHTVQgMDIwMCAoTWl0dGVsZXVyb3DDpGlzY2hlIFNvbW1lcnplaXQpIiwiZW5kRGF0ZSI6IlRodSBKdW4gMjQgMjAyMSAwMDowMDowMCBHTVQgMDIwMCAoTWl0dGVsZXVyb3DDpGlzY2hlIFNvbW1lcnplaXQpIiwiaWF0IjoxNjI0NDUwMDY4LCJleHAiOjE2MjQ0NTM2Njh9.YdbwylenVAWoM41XvgWjTrspJVcP64otGLZ__VWoSHw
+
+
+###
+
 POST http://localhost:8000/addUser
 Content-Type: application/json
 
