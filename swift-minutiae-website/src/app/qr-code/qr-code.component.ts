@@ -9,14 +9,13 @@ import {JwtServerService} from '../jwt-server.service';
 })
 export class QrCodeComponent implements OnInit {
 
-  qrCode: string;
+  qr = '';
 
   constructor(private jwtServerService: JwtServerService) {
-    console.log(this.qrCode);
-    this.qrCode = this.jwtServerService.qrCode;
   }
 
   ngOnInit(): void {
+    this.qr = this.jwtServerService.qrCode;
   }
 
 }

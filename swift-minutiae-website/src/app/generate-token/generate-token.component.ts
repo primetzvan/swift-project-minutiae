@@ -17,6 +17,8 @@ export class GenerateTokenComponent implements OnInit {
   users: User[];
   doors: Door[];
 
+  qr: string | null;
+
   selectedUser: User | null;
   selectedDoor: Door | null;
   startDate: Date | null;
@@ -32,6 +34,7 @@ export class GenerateTokenComponent implements OnInit {
     this.selectedDoor = null;
     this.startDate = null;
     this.endDate = null;
+    this.qr = null;
   }
 
   ngOnInit(): void {
@@ -50,6 +53,8 @@ export class GenerateTokenComponent implements OnInit {
   }
 
   generateToken(): void {
+    console.log(this.selectedUser.userID, this.selectedDoor.doorID, this.startDate, this.endDate);
+
     if (this.selectedDoor != null && this.selectedUser != null && this.startDate != null && this.endDate) {
       this.jwtService.getToken(this.selectedUser.userID, this.selectedDoor.doorID, this.startDate, this.endDate)
         .subscribe(html => this.jwtService.qrCode = html, () => console.log('error jwt'),

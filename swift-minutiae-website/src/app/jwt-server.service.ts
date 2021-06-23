@@ -20,8 +20,10 @@ export class JwtServerService {
 
     const headers: HttpHeaders = new HttpHeaders({Accept: 'text/html'});
 
+    //http://localhost:3000/getQrCode?userID=241&doorID=28&startDate=34&endDate=22
+
     return this.http
-      .get('http://localhost:8000/getQrCode?user=' + userId + '&door=' + doorId + '&startDate=' + start + '&endDate=' + end,
+      .get('http://localhost:3000/getQrCode?userID=' + userId + '&doorID=' + doorId + '&startDate=' + start + '&endDate=' + end,
         {headers, responseType: 'text' }).pipe(
         tap(res => console.log(res))
       );

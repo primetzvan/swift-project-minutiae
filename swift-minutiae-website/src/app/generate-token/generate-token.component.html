@@ -4,7 +4,7 @@
   <mat-form-field appearance="fill">
     <mat-label>Door</mat-label>
     <mat-select [(ngModel)]="selectedDoor" name="door">
-      <mat-option *ngFor="let door of doors" [value]="door.Name" >
+      <mat-option *ngFor="let door of doors" [value]="door" >
         {{door.Name}}
       </mat-option>
     </mat-select>
@@ -15,7 +15,7 @@
   <mat-form-field appearance="fill">
     <mat-label>User</mat-label>
     <mat-select [(ngModel)]="selectedUser" name="user">
-      <mat-option *ngFor="let user of users" [value]="user.lastname" >
+      <mat-option *ngFor="let user of users" [value]="user" >
         {{user.firstname}} {{user.lastname}}
       </mat-option>
     </mat-select>
@@ -42,6 +42,5 @@
 
   <!--<a routerLink="/getToken"><button mat-button color="primary" (click)="generateToken()">Generate</button></a>-->
   <button mat-button color="primary" (click)="generateToken()">Generate</button>
-
 </mat-card>
 
