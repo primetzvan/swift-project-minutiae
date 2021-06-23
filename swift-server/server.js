@@ -64,8 +64,11 @@ server.get('/getAllDoorsFromUser', (req, res) => {
 
     for (var i = 0; i < data.accessTable.length; i++) {
       if (data.accessTable[i] != null) {
+        //TODO: Datumsformat passt nicht
+        console.log(data.accessTable[i].enddate, ":" ,Date.parse(data.accessTable[i].enddate))
         if (data.accessTable[i].userID == elem.userID ) {
           if (Date.parse(data.accessTable[i].enddate) > Date.now()) {
+            console.log("hi")
             accessEl.push(data.accessTable[i]);
           }
         }
@@ -133,7 +136,7 @@ server.post('/addaccess', (req, res) => {
     console.log("startDate:", elem.startDate);
     console.log("userid:", elem.endDate);
 
-    data.accessTable.push({userID: elem.userID, doorID: elem.doorID, startDate: elem.startDate, endDate: elem.endDate}); //add some data
+    data.accessTable.push({userID: elem.userID, doorID: elem.doorID, startdate: elem.startDate, enddate: elem.endDate}); //add some data
     fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
       if (err) {
         const status = 401
