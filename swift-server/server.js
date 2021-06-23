@@ -45,7 +45,7 @@ server.get('/accessTable', (req, res) => {
 
 server.get('/getAllDoorsFromUser', (req, res) => {
 
-  var token = req.body.token;
+  var {token} = req.query;
   var elem = jwt_decode(token);
   console.log(elem)
   var accessEl = [];
@@ -79,7 +79,7 @@ server.get('/getAllDoorsFromUser', (req, res) => {
 
 server.get('/checkaccess', (req, res) => {
 
-  var {token} = req.query;
+  var token = req.body.token;
   var elem = jwt_decode(token);
   console.log(elem);
 
