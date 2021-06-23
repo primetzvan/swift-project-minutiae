@@ -149,53 +149,6 @@ server.post('/addaccess', (req, res) => {
   res.end();
 });
 
-server.post('/addUser', (req, res) => {
-
-  const {firstname, lastname, email, role} = req.body.user;
-
-  var userID = 0;
-
-  fs.readFile("./database.json", (err, data) => {
-    if (err) {
-      const status = 401
-      const message = err
-      res.status(status).json({status, message})
-      return
-    }
-
-    res.status(200)
-
-    var data = JSON.parse(data.toString());
-
-
-    for (var i = 0; i <= data.userTable.length; i++) {
-      if (data.userTable[i] !== undefined) {
-        console.log(data.userTable[i].userID)
-        if (data.userTable[i].userID > userID) {
-          userID = data.userTable[i].userID;
-        }
-      }
-    }
-
-    userID = userID + 1;
-
-    res.status(200)
-
-    data.userTable.push({userID: userID, firstname: firstname, lastname: lastname, email: email, role: role}); //add some data
-
-    fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
-      if (err) {
-        const status = 401
-        const message = err
-        res.status(status).json({status, message})
-        return
-      }
-    });
-  })
-  res.status(200);
-  res.end();
-});
-
 //TODO:
 //add user
 server.post('/addUser', (req, res) => {
