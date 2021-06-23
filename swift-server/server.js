@@ -147,7 +147,7 @@ server.post('/addaccess', (req, res) => {
       }
     });
   })
-  res.status(200);
+  res.status(200).json(elem.doorID);
   res.end();
 });
 
