@@ -15,20 +15,21 @@ const SECRET_KEY = '123456789'
 
 const expiresIn = '1h'
 
-function addToDB(userID, doorID, startdate, enddate){
+function addToDB(userID, doorID, startdate, enddate) {
   fs.readFile("./database.json", (err, data) => {
     if (err) {
       const status = 401
       const message = err
       res.status(status).json({status, message})
       return
-    };
+    }
+    ;
 
     // Get current users data
     var data = JSON.parse(data.toString());
 
     //Add new user
-    data.accessTable.push({userID: userID, doorID: doorID, startdate: startdate, enddate: enddate }); //add some data
+    data.accessTable.push({userID: userID, doorID: doorID, startdate: startdate, enddate: enddate}); //add some data
     fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
       if (err) {
         const status = 401
@@ -41,20 +42,20 @@ function addToDB(userID, doorID, startdate, enddate){
 }
 
 // Create a token from a payload
-function createToken(payload){
+function createToken(payload) {
   return jwt.sign(payload, SECRET_KEY, {expiresIn})
 }
 
 
 // Check if the access exists in database
-function isAuthenticated({userID, doorID, startdate, enddate}){
+function isAuthenticated({userID, doorID, startdate, enddate}) {
   return db.accessTable.findIndex(access => access.userID === userID && access.doorID === doorID && access.startDate === startdate && access.endDate === enddate) !== -1
 }
 
 
 // Verify the token
-function verifyToken(token){
-  return  jwt.verify(token, SECRET_KEY, (err, decode) => decode !== undefined ?  decode : err)
+function verifyToken(token) {
+  return jwt.verify(token, SECRET_KEY, (err, decode) => decode !== undefined ? decode : err)
 }
 
 // serve token as QrCode
@@ -62,12 +63,12 @@ function verifyToken(token){
 server.get('/getQrCode', (req, res) => {
   console.log("test; request body:");
   console.log(req.body);
-  console.log("Query =" , req.query)
+  console.log("Query =", req.query)
   // Access the provided 'user' and 'door' query parameters
   const {userID, doorID, startDate, endDate} = req.query;
   var access_token;
 
-  if(isAuthenticated({userID, doorID, startDate, endDate}) === true) {
+  if (isAuthenticated({userID, doorID, startDate, endDate}) === true) {
     const status = 401;
     const message = 'existiert schon';
     res.status(status).json({status, message});
@@ -76,9 +77,9 @@ server.get('/getQrCode', (req, res) => {
 
   addToDB(userID, doorID, startDate, endDate);
 
-  if(userID && doorID && startDate && endDate) {
-    console.log("USER:"+ userID + " DOOR:" + doorID + " STARTDATE:" + startDate + " ENDDATE:" + endDate);
-    access_token = createToken({userID, doorID,startDate,endDate}, expiresIn);
+  if (userID && doorID && startDate && endDate) {
+    console.log("USER:" + userID + " DOOR:" + doorID + " STARTDATE:" + startDate + " ENDDATE:" + endDate);
+    access_token = createToken({userID, doorID, startDate, endDate}, expiresIn);
     console.log("Access Token:" + access_token);
   }
 
@@ -238,10 +239,9 @@ server.get('/logAccessTable', (req, res) => {
 //add user
 server.post('/addUser', (req, res) => {
 
-  var token = req.body.user;
-  console.log(token);
-  const {userID, firstname, lastname, email, role} = req.body.user;
-  console.log(userID, lastname);
+  const {firstname, lastname, email, role} = req.body.user;
+
+  var userID = 0;
 
   fs.readFile("./database.json", (err, data) => {
     if (err) {
@@ -255,8 +255,21 @@ server.post('/addUser', (req, res) => {
 
     var data = JSON.parse(data.toString());
 
+
+    for (var i = 0; i <= data.userTable.length; i++) {
+      if (data.userTable[i] !== undefined) {
+        console.log(data.userTable[i].userID)
+        if (data.userTable[i].userID > userID) {
+          userID = data.userTable[i].userID;
+        }
+      }
+    }
+
+    userID = userID + 1;
+
+    res.status(200)
+
     data.userTable.push({userID: userID, firstname: firstname, lastname: lastname, email: email, role: role}); //add some data
-    console.log(data);
 
     fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
       if (err) {
@@ -290,28 +303,25 @@ server.delete('/deleteUser', (req, res) => {
 
     var data = JSON.parse(data.toString());
 
-    for(var i = 0; i < data.accessTable.length; i++)
-    {
+    for (var i = 0; i < data.accessTable.length; i++) {
       if (data.accessTable[i] != null) {
         if (data.accessTable[i].userID === userID) {
           console.log(data.accessTable[i])
           //delete data.accessTable[i];
-          data.accessTable.splice (j, 1);
+          data.accessTable.splice(j, 1);
         }
       }
     }
 
-    for(var j = 0; j < data.userTable.length; j++)
-    {
+    for (var j = 0; j < data.userTable.length; j++) {
       if (data.userTable[j] != null) {
-        if(data.userTable[j].userID === userID)
-        {
+        if (data.userTable[j].userID === userID) {
           firstname = data.userTable[j].firstname;
           lastname = data.userTable[j].lastname;
           email = data.userTable[j].email;
           role = data.userTable[j].role;
           //delete data.userTable[j];
-          data.userTable.splice (j, 1);
+          data.userTable.splice(j, 1);
         }
       }
     }

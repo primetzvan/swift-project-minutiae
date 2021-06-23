@@ -12,7 +12,6 @@ Content-Type: application/json
 
 {
   "user": {
-    "userID": 5,
     "firstname": "Chrissy",
     "lastname": "Raffeiner",
     "email": "Chrissy@gmail.com",

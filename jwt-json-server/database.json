@@ -114,6 +114,12 @@
       "doorID": "3",
       "startdate": "Thu Jun 10 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)",
       "enddate": "Thu Jun 24 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)"
+    },
+    {
+      "userID": "1",
+      "doorID": "3",
+      "startdate": "Thu Jun 10 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)",
+      "enddate": "Thu Jun 24 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)"
     }
   ],
   "profile": {
