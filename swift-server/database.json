@@ -84,32 +84,20 @@
     {
       "userID": 1,
       "doorID": 1,
-      "startdate": "12.09.18",
-      "enddate": "12.09.21"
+      "startDate": "2012-09-18",
+      "endDate": "2021-09-18"
     },
     {
       "userID": 1,
       "doorID": 2,
-      "startdate": "12.09.18",
-      "enddate": "12.09.21"
+      "startDate": "2012-09-18",
+      "endDate": "2021-09-18"
     },
     {
-      "userID": 1,
-      "doorID": 1,
-      "startdate": "28.04.21",
-      "enddate": "30.04.21"
-    },
-    {
-      "userID": 1,
-      "doorID": 1,
-      "startdate": "28.04.21",
-      "enddate": "30.04.21"
-    },
-    {
-      "userID": "1",
-      "doorID": "3",
-      "startdate": "Thu Jun 10 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)",
-      "enddate": "Thu Jun 24 2021 00:00:00 GMT 0200 (Mitteleuropäische Sommerzeit)"
+      "userID": "2",
+      "doorID": "1",
+      "startDate": "2021-06-23",
+      "endDate": "2021-06-26"
     }
   ],
   "profile": {
