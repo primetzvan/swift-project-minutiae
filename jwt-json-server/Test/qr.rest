@@ -25,6 +25,10 @@ DELETE http://localhost:3000/deleteUser
 Content-Type: application/json
 
 {
-  "userID": 4
+  "userID": 3
 }
+
+###
+
+DELETE http://localhost:3000/deleteUser?userID=3
 

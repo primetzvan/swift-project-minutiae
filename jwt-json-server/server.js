@@ -287,7 +287,7 @@ server.post('/addUser', (req, res) => {
 //TODO: delete user
 server.delete('/deleteUser', (req, res) => {
 
-  const {userID} = req.body;
+  const {userID} = req.query;
   console.log(userID);
 
   fs.readFile("./database.json", (err, data) => {
@@ -304,7 +304,7 @@ server.delete('/deleteUser', (req, res) => {
 
     for (var i = 0; i < data.accessTable.length; i++) {
       if (data.accessTable[i] != null) {
-        if (data.accessTable[i].userID === userID) {
+        if (data.accessTable[i].userID == userID) {
           console.log(data.accessTable[i])
           //delete data.accessTable[i];
           data.accessTable.splice(j, 1);
@@ -314,14 +314,13 @@ server.delete('/deleteUser', (req, res) => {
 
     for (var j = 0; j < data.userTable.length; j++) {
       if (data.userTable[j] != null) {
-        if (data.userTable[j].userID === userID) {
+        console.log(data.userTable[j].userID)
+        if (data.userTable[j].userID == userID) {
           //delete data.userTable[j];
           data.userTable.splice(j, 1);
         }
       }
     }
-
-    console.log(data.userTable)
 
     fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
       if (err) {
