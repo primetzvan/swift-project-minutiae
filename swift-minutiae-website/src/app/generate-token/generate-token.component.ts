@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, LOCALE_ID, OnInit} from '@angular/core';
 import {Door} from '../models/door';
 import {User} from '../models/user';
 import {JsonServerService} from '../json-server.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {JwtServerService} from '../jwt-server.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {DatePipe, formatDate} from "@angular/common";
 
 
 @Component({
@@ -42,6 +43,7 @@ export class GenerateTokenComponent implements OnInit {
     this.getDoors();
   }
 
+
   getUsers(): void {
     this.userService.getAllUser()
       .subscribe(users => this.users = users);
@@ -53,8 +55,13 @@ export class GenerateTokenComponent implements OnInit {
   }
 
   generateToken(): void {
+    const format = 'dd.MM.yy';
+    const locale = 'en-US';
+    const startDate = formatDate(this.startDate, format, locale);
+    const endDate = formatDate(this.endDate, format, locale);
+
     if (this.selectedDoor != null && this.selectedUser != null && this.startDate != null && this.endDate) {
-      this.jwtService.getToken(this.selectedUser.userID, this.selectedDoor.doorID, this.startDate, this.endDate)
+      this.jwtService.getToken(this.selectedUser.userID, this.selectedDoor.doorID, startDate, endDate)
         .subscribe(html => this.jwtService.qrCode = html, () => console.log('error jwt'),
           () => this.router.navigate(['/users']));
       //           () => this.router.navigate(['/getToken']));

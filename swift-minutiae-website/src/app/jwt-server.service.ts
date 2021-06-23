@@ -16,7 +16,7 @@ export class JwtServerService {
   }
 
   //  { "userid": 1 , "doorid": 13, "from": 1618471665, "to": 1618471999 }
-  getToken(userId: number, doorId: number, start: Date, end: Date): Observable<string> {
+    getToken(userId: number, doorId: number, start: string, end: string): Observable<string> {
 
     const headers: HttpHeaders = new HttpHeaders({Accept: 'text/html'});
 

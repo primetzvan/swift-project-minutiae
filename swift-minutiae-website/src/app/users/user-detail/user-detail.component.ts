@@ -34,8 +34,15 @@ export class UserDetailComponent implements OnInit {
 
   addUser(): void {
    var user = new User(null, this.firstName, this.lastName, this.email, this.role);
+
    this.userService.addUser(user)
-     .subscribe(response => console.log(response), () => console.log('error add user'),
-       () => this.router.navigate(['/users']));
+     .subscribe(response => user.userID = response, () => console.log('error add user'),
+       () =>
+         (this.userService.addUserToSwift(user)
+           .subscribe(response => console.log('added User to swift'), () => console.log('error add user to swift'),
+             () => this.router.navigate(['/users'])))
+     );
+
+
   }
 }
