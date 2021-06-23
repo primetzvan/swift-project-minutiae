@@ -55,7 +55,7 @@ export class GenerateTokenComponent implements OnInit {
   }
 
   generateToken(): void {
-    const format = 'dd.MM.yy';
+    const format = 'yyyy-MM-dd';
     const locale = 'en-US';
     const startDate = formatDate(this.startDate, format, locale);
     const endDate = formatDate(this.endDate, format, locale);
