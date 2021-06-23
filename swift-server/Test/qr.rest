@@ -11,7 +11,7 @@ GET http://localhost:8000/getAllDoorsFromUser
 Content-Type: application/json
 
 {
-  "userID": 1
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIxIiwiZG9vcklEIjoiMyIsInN0YXJ0RGF0ZSI6IlRodSBKdW4gMTAgMjAyMSAwMDowMDowMCBHTVQgMDIwMCAoTWl0dGVsZXVyb3DDpGlzY2hlIFNvbW1lcnplaXQpIiwiZW5kRGF0ZSI6IlRodSBKdW4gMjQgMjAyMSAwMDowMDowMCBHTVQgMDIwMCAoTWl0dGVsZXVyb3DDpGlzY2hlIFNvbW1lcnplaXQpIiwiaWF0IjoxNjI0NDU0OTk4LCJleHAiOjE2MjQ0NTg1OTh9.qsyovPqcluQ2M6MHBnHlPzzLTiyN0LaAeYDG5ROLwn4"
 }
 
 ###

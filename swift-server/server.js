@@ -45,7 +45,9 @@ server.get('/accessTable', (req, res) => {
 
 server.get('/getAllDoorsFromUser', (req, res) => {
 
-  const {userID} = req.body;
+  var token = req.body.token;
+  var elem = jwt_decode(token);
+  console.log(elem)
   var accessEl = [];
 
   fs.readFile("./database.json", (err, data) => {
@@ -62,10 +64,10 @@ server.get('/getAllDoorsFromUser', (req, res) => {
 
     for (var i = 0; i < data.accessTable.length; i++) {
       if (data.accessTable[i] != null) {
-        console.log(data.accessTable[i].enddate)
-        console.log(Date.parse(data.accessTable[i].enddate))
-        if (data.accessTable[i].userID === userID && Date.parse(data.accessTable[i].enddate) > Date.now()) {
-          accessEl.push(data.accessTable[i]);
+        if (data.accessTable[i].userID == elem.userID ) {
+          if (Date.parse(data.accessTable[i].enddate) > Date.now()) {
+            accessEl.push(data.accessTable[i]);
+          }
         }
       }
     }

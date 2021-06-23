@@ -83,7 +83,6 @@ server.get('/getQrCode', (req, res) => {
   }
 
 
-
   var expUnixTS = verifyToken(access_token).exp;
   console.log(expUnixTS);
 

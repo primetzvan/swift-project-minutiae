@@ -78,36 +78,6 @@
       "doorID": 1,
       "startdate": "28.04.21",
       "enddate": "30.04.21"
-    },
-    {
-      "userID": "241",
-      "doorID": [
-        "28",
-        "28"
-      ],
-      "startDate": [
-        "3d?userID=241",
-        "34"
-      ],
-      "endDate": [
-        "22",
-        "22"
-      ]
-    },
-    {
-      "userID": "241",
-      "doorID": [
-        "28",
-        "28"
-      ],
-      "startDate": [
-        "3d?userID=241",
-        "34"
-      ],
-      "endDate": [
-        "22",
-        "22"
-      ]
     }
   ],
   "profile": {
