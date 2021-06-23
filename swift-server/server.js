@@ -64,8 +64,11 @@ server.get('/getAllDoorsFromUser', (req, res) => {
 
     for (var i = 0; i < data.accessTable.length; i++) {
       if (data.accessTable[i] != null) {
-        if (data.accessTable[i].userID == elem.userID ) {
-          if (Date.parse(data.accessTable[i].enddate) > Date.now()) {
+        //TODO: Datumsformat passt nicht
+        console.log(data.accessTable[i].endDate, ":", Date.parse(data.accessTable[i].endDate))
+        if (data.accessTable[i].userID == elem.userID) {
+          if (Date.parse(data.accessTable[i].endDate) >= Date.now()) {
+            console.log("hi")
             accessEl.push(data.accessTable[i]);
           }
         }
@@ -96,15 +99,16 @@ server.get('/checkaccess', (req, res) => {
 
     var result;
     //nexte zeile userID aus elem usw.
-    if (data.accessTable.findIndex(access => access.userID === elem.userID && access.doorID === elem.doorID && access.startdate === elem.startdate && access.enddate === elem.enddate) && elem.enddate >= Date.now()) {
-      console.log(true)
-      result = true
-      res.status(200).json(result)
-    } else {
-      console.log(false)
-      result = false
-      res.status(200).json(result)
+    for (let i = 0; i < data.accessTable.length; i++) {
+      if (data.accessTable[i].userID == elem.userID && data.accessTable[i].doorID == elem.doorID && data.accessTable[i].startdate === elem.startdate && data.accessTable[i].enddate === elem.enddate) {
+        if (Date.parse(data.accessTable[i].endDate) >= Date.now()) {
+          result = true
+        }
+      } else {
+        result = false
+      }
     }
+    res.status(200).json(result)
   })
 })
 
@@ -143,7 +147,7 @@ server.post('/addaccess', (req, res) => {
       }
     });
   })
-  res.status(200);
+  res.status(200).json(elem.doorID);
   res.end();
 });
 
