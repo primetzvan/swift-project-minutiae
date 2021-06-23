@@ -36,3 +36,19 @@ Content-Type: application/json
 {
   "token": "eyJhbGJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNDEiLCJkb29ySUQiOlsiMjgiLCIyOCJdLCJzdGFydERhdGUiOlsiM2Q_dXNlcklEPTI0MSIsIjM0Il0sImVuZERhdGUiOlsiMjIiLCIyMiJdLCJpYXQiOjE2MjM5MTEwMzgsImV4cCI6MTYyMzkxNDYzOH0.goTDtsQRFKIOYJc9lJOqN2Ej_kZttCUgfm35KXSdusM"
 }
+
+
+###
+
+POST http://localhost:8000/addUser
+Content-Type: application/json
+
+{
+  "user": {
+    "userID": 3,
+    "firstname": "Chrissy",
+    "lastname": "Raffeiner",
+    "email": "Chrissy@gmail.com",
+    "role": "user"
+  }
+}

@@ -40,6 +40,13 @@
       "lastname": "Primetzhofer",
       "email": "Vanessa@gmail.com",
       "role": "admin"
+    },
+    {
+      "userID": 3,
+      "firstname": "Chrissy",
+      "lastname": "Raffeiner",
+      "email": "Chrissy@gmail.com",
+      "role": "user"
     }
   ],
   "fingerTable": [

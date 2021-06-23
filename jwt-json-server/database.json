@@ -47,6 +47,13 @@
       "lastname": "Raffeiner",
       "email": "Chrissy@gmail.com",
       "role": "user"
+    },
+    {
+      "userID": 4,
+      "firstname": "Chrissy",
+      "lastname": "Raffeiner",
+      "email": "Chrissy@gmail.com",
+      "role": "user"
     }
   ],
   "fingerTable": [

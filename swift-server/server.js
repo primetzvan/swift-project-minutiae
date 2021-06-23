@@ -196,6 +196,42 @@ server.post('/addUser', (req, res) => {
   res.end();
 });
 
+//TODO:
+//add user
+server.post('/addUser', (req, res) => {
+
+  var token = req.body.user;
+  console.log(token);
+  const {userID, firstname, lastname, email, role} = req.body.user;
+  console.log(userID, lastname);
+
+  fs.readFile("./database.json", (err, data) => {
+    if (err) {
+      const status = 401
+      const message = err
+      res.status(status).json({status, message})
+      return
+    }
+
+    res.status(200)
+
+    var data = JSON.parse(data.toString());
+
+    data.userTable.push({userID: userID, firstname: firstname, lastname: lastname, email: email, role: role}); //add some data
+
+    fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
+      if (err) {
+        const status = 401
+        const message = err
+        res.status(status).json({status, message})
+        return
+      }
+    });
+  })
+  res.status(200);
+  res.end();
+});
+
 
 server.listen(8000, () => {
   console.log('Run Auth API Server')
