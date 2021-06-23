@@ -279,9 +279,9 @@ server.post('/addUser', (req, res) => {
         return
       }
     });
+    res.status(200).json(userID);
+    res.end();
   })
-  res.status(200);
-  res.end();
 });
 
 //TODO: delete user
