@@ -289,7 +289,6 @@ server.delete('/deleteUser', (req, res) => {
 
   const {userID} = req.body;
   console.log(userID);
-  var firstname, lastname, email, role, num;
 
   fs.readFile("./database.json", (err, data) => {
     if (err) {
@@ -316,10 +315,6 @@ server.delete('/deleteUser', (req, res) => {
     for (var j = 0; j < data.userTable.length; j++) {
       if (data.userTable[j] != null) {
         if (data.userTable[j].userID === userID) {
-          firstname = data.userTable[j].firstname;
-          lastname = data.userTable[j].lastname;
-          email = data.userTable[j].email;
-          role = data.userTable[j].role;
           //delete data.userTable[j];
           data.userTable.splice(j, 1);
         }

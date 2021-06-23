@@ -185,6 +185,60 @@ server.post('/addUser', (req, res) => {
   res.end();
 });
 
+//TODO: delete user
+server.delete('/deleteUser', (req, res) => {
+
+  const {userID} = req.body;
+  console.log(userID);
+  var firstname, lastname, email, role, num;
+
+  fs.readFile("./database.json", (err, data) => {
+    if (err) {
+      const status = 401
+      const message = err
+      res.status(status).json({status, message})
+      return
+    }
+
+    res.status(200)
+
+    var data = JSON.parse(data.toString());
+
+    for (var i = 0; i < data.accessTable.length; i++) {
+      if (data.accessTable[i] != null) {
+        if (data.accessTable[i].userID === userID) {
+          console.log(data.accessTable[i])
+          //delete data.accessTable[i];
+          data.accessTable.splice(j, 1);
+        }
+      }
+    }
+
+    for (var j = 0; j < data.userTable.length; j++) {
+      if (data.userTable[j] != null) {
+        if (data.userTable[j].userID === userID) {
+          //delete data.userTable[j];
+          data.userTable.splice(j, 1);
+        }
+      }
+    }
+
+    console.log(data.userTable)
+
+    fs.writeFile("./database.json", JSON.stringify(data, null, 2), (err, result) => {  // WRITE
+      if (err) {
+        const status = 401
+        const message = err
+        res.status(status).json({status, message})
+        return
+      }
+    });
+  })
+  res.status(200);
+  res.end();
+
+})
+
 
 server.listen(8000, () => {
   console.log('Run Auth API Server')
