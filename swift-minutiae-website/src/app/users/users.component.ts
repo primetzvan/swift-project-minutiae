@@ -24,12 +24,8 @@ export class UsersComponent implements OnInit {
       .subscribe(users => this.USER_DATA = users);
   }
 
-  addUsers(user: User): void {
-    this.userService.addUser(user);
-    this.USER_DATA.push(user);
-  }
-
   deleteUser(id: number): void{
+    console.log("del id" + id);
     this.userService.deleteUser(id);
   }
 }

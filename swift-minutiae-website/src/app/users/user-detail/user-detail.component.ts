@@ -1,5 +1,7 @@
-import {ActivatedRoute} from '@angular/router';
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {JsonServerService} from "../../json-server.service";
+import {Role, User} from "../../models/user";
 
 @Component({
   selector: 'app-user-detail',
@@ -12,13 +14,13 @@ export class UserDetailComponent implements OnInit {
   public firstName: string;
   public lastName: string;
   public email: string;
-  public role: Role | null;
+  public role: Role;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private userService: JsonServerService,  private router: Router) {
     this.firstName = '';
     this.lastName = '';
     this.email = '';
-    this.role = null;
+    this.role = Role.USER;
   }
 
   ngOnInit(): void {
@@ -29,12 +31,11 @@ export class UserDetailComponent implements OnInit {
     return !!(this.email !== '' && this.email.search('@'));
   }
 
-  addUser(): void {
-    // TODO
-  }
-}
 
-export enum Role {
-  Admin,
-  User
+  addUser(): void {
+   var user = new User(null, this.firstName, this.lastName, this.email, this.role);
+   this.userService.addUser(user)
+     .subscribe(response => console.log(response), () => console.log('error add user'),
+       () => this.router.navigate(['/users']));
+  }
 }

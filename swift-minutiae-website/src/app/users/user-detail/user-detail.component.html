@@ -23,6 +23,6 @@
           <mat-option [value]=1>User</mat-option>
       </mat-select>
     </mat-form-field>
-    <button mat-raised-button [routerLink]="''" [disabled]="firstName==''||lastName==''||!checkEmail()||role==null" (click)="addUser()">Add</button>
+    <button mat-raised-button [disabled]="firstName==''||lastName==''||!checkEmail()||role==null" (click)="addUser()">Add</button>
   </form>
 </mat-card>

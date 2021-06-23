@@ -20,7 +20,7 @@ export class JwtServerService {
 
     const headers: HttpHeaders = new HttpHeaders({Accept: 'text/html'});
 
-    //http://localhost:3000/getQrCode?userID=241&doorID=28&startDate=34&endDate=22
+    window.open('http://localhost:3000/getQrCode?userID=' + userId + '&doorID=' + doorId + '&startDate=' + start + '&endDate=' + end, "_blank");
 
     return this.http
       .get('http://localhost:3000/getQrCode?userID=' + userId + '&doorID=' + doorId + '&startDate=' + start + '&endDate=' + end,
