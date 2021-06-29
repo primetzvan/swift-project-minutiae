@@ -68,8 +68,12 @@ server.get('/getAllDoorsFromUser', (req, res) => {
         console.log(data.accessTable[i].endDate, ":", Date.parse(data.accessTable[i].endDate))
         if (data.accessTable[i].userID == elem.userID) {
           if (Date.parse(data.accessTable[i].endDate) >= Date.now()) {
-            console.log("hi")
-            accessEl.push(data.accessTable[i]);
+            for (let j = 0; j < data.doorTable.length; j++) {
+              if (data.doorTable[j].doorID == data.accessTable[i].doorID) {
+                console.log("hi")
+                accessEl.push(data.doorTable[j]);
+              }
+            }
           }
         }
       }
